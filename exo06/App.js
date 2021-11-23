@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { StyleSheet, View, Text, TextInput, TouchableHighlight } from 'react-native'
+import { StyleSheet, View, Text, TextInput } from 'react-native'
 
 const styles = StyleSheet.create({
   root: {
@@ -9,25 +9,18 @@ const styles = StyleSheet.create({
   },
   line: {
     flexDirection: 'row',
+
   },
   underline: {
     borderBottomWidth: 1,
-  },
-  button: {
-    backgroundColor: "#DDDDDD",
-    fontSize: 24
   }
 });
 
 
 export default function App() {
   const [text, setText] = useState('')
-  const [add, setAdd] = useState('')
-  const onPress = () => setAdd(text);
-
   return (
     <View style={styles.root}>
-
       <View style={styles.line}>
         <TextInput
           style={styles.underline}
@@ -37,19 +30,11 @@ export default function App() {
             setText(text)
           }}
         />
-        <TouchableHighlight onPress={onPress} >
-          <View style={styles.button}>
-            <Text> Add</Text>
-          </View>
-        </TouchableHighlight >
+        <Text> Add</Text>
       </View>
-
-      <Text
-        multiline
-        numberOfLines={10}
-      >
-        {'\n'}{add}
+      <Text style={{ fontSize: 24 }}>
+        {'\n'}{text}
       </Text>
-    </View >
+    </View>
   );
 }
