@@ -1,4 +1,3 @@
-import 'react-native-gesture-handler';
 import React, { useState } from 'react';
 import { StyleSheet, View, Text, Button, TextInput } from 'react-native';
 import { createStackNavigator } from '@react-navigation/stack'
@@ -65,7 +64,6 @@ const Screen2 = ({ route }) => {
     </View>
   )
 }
-
 export default function App() {
   return (
     <NavigationContainer>

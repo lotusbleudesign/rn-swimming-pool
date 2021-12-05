@@ -25,7 +25,7 @@ export default function App() {
         <TextInput
           style={styles.underline}
           value={text}
-          placeholder="Enter a destination"
+          placeholder="Enter a destination..."
           onChangeText={(text) => {
             setText(text)
           }}
